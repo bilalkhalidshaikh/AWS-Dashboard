@@ -74,9 +74,24 @@ module.exports = {
 
   //   '@next/next/no-img-element': 'off', // Temporary disabled
   // },
-  "rules": {
-    "@typescript-eslint/no-unused-vars": "off",
-    "no-unused-vars": "off",
-    "@typescript-eslint/use-unknown-in-catch-callback-variable": "off"
-  }
+  rules: {
+    '@typescript-eslint/no-unused-vars': [
+      'error',
+      {
+        ignoreRestSiblings: true,
+        argsIgnorePattern: '^_',
+        varsIgnorePattern: '^_',
+        caughtErrorsIgnorePattern: '^_',
+      },
+    ],
+    '@typescript-eslint/use-unknown-in-catch-callback-variable': ['error', { preferUnknown: true }],
+    'no-unused-vars': [
+      'error',
+      {
+        vars: 'all',
+        args: 'after-used',
+        caughtErrors: 'all',
+      },
+    ],
+  },
 };
