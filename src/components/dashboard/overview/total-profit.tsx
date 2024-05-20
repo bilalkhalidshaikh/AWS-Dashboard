@@ -19,7 +19,8 @@ export function TotalProfit({ value, sx }: TotalProfitProps): React.JSX.Element 
         <Stack direction="row" sx={{ alignItems: 'flex-start', justifyContent: 'space-between' }} spacing={3}>
           <Stack spacing={1}>
             <Typography color="text.secondary" variant="overline">
-              Total Profit
+              {/* Total Profit */}
+              Current Plan
             </Typography>
             <Typography variant="h4">{value}</Typography>
           </Stack>
